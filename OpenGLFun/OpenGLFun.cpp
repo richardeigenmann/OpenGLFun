@@ -33,10 +33,21 @@ auto drawLines() -> void {
 	glEnd();
 }
 
+auto drawSolidTriangle() -> void {
+	glBegin(GL_TRIANGLES);
+	glColor3f(0.5, 0.8, 0.3);
+	glVertex2f(0.1f, -0.6f);
+	glVertex2f(0.7f, -0.6f);
+	glVertex2f(0.4f, -0.1f);
+	glEnd();
+}
+
+
 auto update() -> void {
 	glClear(GL_COLOR_BUFFER_BIT);
 	//drawPoints();
-	drawLines();
+	//drawLines();
+	drawSolidTriangle();
 	glFlush();
 }
 
