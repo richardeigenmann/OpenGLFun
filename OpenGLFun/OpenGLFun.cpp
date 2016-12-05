@@ -22,9 +22,21 @@ auto drawPoints() -> void {
 	glEnd();
 }
 
+auto drawLines() -> void {
+	glBegin(GL_LINES);
+	glColor3f(0.5, 0.8, 0.3);
+	glVertex2f(0.1f, -0.6f);
+	glVertex2f(0.7f, -0.6f);
+
+	glVertex2f(0.7f, -0.6f);
+	glVertex2f(0.4f, -0.1f);
+	glEnd();
+}
+
 auto update() -> void {
 	glClear(GL_COLOR_BUFFER_BIT);
-	drawPoints();
+	//drawPoints();
+	drawLines();
 	glFlush();
 }
 
