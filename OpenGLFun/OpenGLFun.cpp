@@ -42,12 +42,34 @@ auto drawSolidTriangle() -> void {
 	glEnd();
 }
 
+auto drawGradientTriangle() -> void {
+	glBegin(GL_TRIANGLES);
+	glColor3f(0.5, 0.0f, 0.0f);
+	glVertex2f(0.3f, -0.4f);
+	glColor3f(0.2, 0.87, 0.1);
+	glVertex2f(0.9f, -0.4f);
+	glColor3f(0.4, 0.95, 0.3);
+	glVertex2f(0.6f, -0.9f);
+	glEnd();
+}
+
+auto drawQuad() -> void {
+	glBegin(GL_QUADS);
+	glColor3f(0.1f, 1.0f, 0.1f);
+	glVertex2f(0.1f, -0.1f);
+	glVertex2f(0.1f, -0.6f);
+	glVertex2f(0.6f, -0.6f);
+	glVertex2f(0.6f, -0.1f);
+	glEnd();
+}
 
 auto update() -> void {
 	glClear(GL_COLOR_BUFFER_BIT);
 	//drawPoints();
 	//drawLines();
-	drawSolidTriangle();
+	//drawSolidTriangle();
+	//drawGradientTriangle();
+	drawQuad();
 	glFlush();
 }
 
